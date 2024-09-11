@@ -1,0 +1,130 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.hero-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #e2e2e2, #ffffff);
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif; /* Updated Font */
+}
+
+.hero-text {
+  text-align: center;
+  color: #333;
+  z-index: 1;
+  max-width: 700px; /* Increased max-width */
+}
+
+.hero-text h1 {
+  font-size: 4rem; /* Increased font size */
+  margin-bottom: 1rem; /* Increased margin */
+  font-weight: 600; /* Increased font weight */
+  animation: fadeInUp 2s ease-out;
+}
+
+.hero-text p {
+  font-size: 1.75rem; /* Increased font size */
+  margin-bottom: 2rem; /* Increased margin */
+  animation: fadeInUp 2s ease-out 0.5s;
+}
+
+.hero-button {
+  padding: 0.75rem 2rem;
+  font-size: 1.25rem;
+  color: #fff;
+  background: #007bff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  font-weight: 600; /* Increased font weight */
+}
+
+.hero-button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+.hero-graphics {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.graphic-item {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 123, 255, 0.3);
+  animation: moveGraphics 15s infinite, pulse 5s infinite;
+}
+
+.graphic-one {
+  width: 250px;
+  height: 250px;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.graphic-two {
+  width: 300px;
+  height: 300px;
+  bottom: 10%;
+  right: 15%;
+  animation-delay: 5s;
+}
+
+.graphic-three {
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 10s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveGraphics {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(360deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    background: rgba(0, 123, 255, 0.3);
+  }
+  50% {
+    transform: scale(1.1);
+    background: rgba(0, 123, 255, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    background: rgba(0, 123, 255, 0.3);
+  }
+}

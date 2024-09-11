@@ -1,0 +1,90 @@
+.route-container {
+  padding: 2rem;
+
+  text-align: center;
+  max-width: 900px; /* Increased width for better layout */
+  margin: 0 auto;
+ 
+}
+
+.route-header h2 {
+  font-size: 2.5rem; /* Larger font size for prominence */
+  color: #007bff; /* Primary color for headings */
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat', sans-serif; /* Modern, clean font */
+}
+
+.route-header p {
+  margin-top: 0;
+  font-size: 1.2rem; /* Slightly larger text for readability */
+  color: #6c757d; /* Softer color for supporting text */
+  font-family: 'Roboto', sans-serif; /* Clean font for body text */
+}
+
+.route-graphics {
+  position: relative;
+  margin-top: 2rem;
+  height: 250px; /* Increased height for better visibility */
+  width: 100%;
+}
+
+.route-path {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.route-path-normal {
+  opacity: 0.3; /* Less emphasis on normal path */
+}
+
+.route-path-disaster {
+  opacity: 0.5; /* Moderate emphasis for disaster path */
+}
+
+.route-path-optimized {
+  opacity: 0.7; /* Greater emphasis for optimized path */
+}
+
+.animated-route {
+  stroke-dasharray: 2000; /* Increased for smoother animation */
+  stroke-dashoffset: 2000;
+  animation: moveRoute 6s ease-in-out infinite; /* Faster animation for more dynamic effect */
+}
+
+@keyframes moveRoute {
+  0% {
+    stroke-dashoffset: 2000;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 2000;
+  }
+}
+
+.icon-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem; /* Slightly larger font size for icons */
+  font-family: 'Roboto', sans-serif; /* Clean font for labels */
+}
+
+.source-icon {
+  top: 20%; /* Positioning adjusted for a better look */
+  left: 3%;
+}
+
+.destination-icon {
+  bottom: 2%; /* Ensuring the icon stays within view */
+  right: 3%;
+}
+
+.icon-container span {
+  margin-top: 0.5rem;
+  color: #333; /* Darker color for better contrast */
+  font-weight: 600; /* Bolder text for labels */
+}

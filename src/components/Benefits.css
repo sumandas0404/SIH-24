@@ -1,0 +1,59 @@
+/* Benefits.css */
+section {
+    background-color: #f3f4f6; /* Light gray background for contrast */
+    padding: 4rem 0; /* Add padding for better spacing */
+  }
+  
+  h2 {
+    font-family: 'Poppins', sans-serif; /* Stylish, clean font */
+    color: #1a202c; /* Darker color for headings */
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid columns */
+    gap: 1.5rem; /* Spacing between cards */
+    justify-items: center; /* Center align cards */
+  }
+  
+  .bg-glass {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    border-radius: 1rem; /* Rounded corners */
+    backdrop-filter: blur(10px); /* Glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional border for better visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Base shadow */
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    max-width: 350px; /* Max width for consistent card size */
+    text-align: center; /* Center align text */
+  }
+  
+  .bg-glass:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+  
+  .icon-container {
+    animation: bounce 1s infinite; /* Continuous bounce effect for icons */
+  }
+  
+  h3 {
+    font-family: 'Roboto', sans-serif; /* Modern font for titles */
+    color: #2d3748; /* Dark color for text */
+  }
+  
+  p {
+    color: #4a5568; /* Slightly lighter color for description text */
+  }
+  
+  /* Keyframes for icon bounce effect */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
